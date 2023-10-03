@@ -20,3 +20,19 @@ function invert_list(list::Vector{Int32})
 end
 
 
+function sort_list(arr::Vector{Int32})
+    l = length(arr)
+    swapped = true
+    while swapped
+        swapped = false
+        for j = 2:l
+            if arr[j-1] > arr[j]
+                tmp = arr[j-1]
+                arr[j-1] = arr[j]
+                arr[j] = tmp
+                swapped = true
+            end
+        end
+    end
+end
+

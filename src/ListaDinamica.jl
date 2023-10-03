@@ -6,14 +6,16 @@ include("minMax.jl")
 
 
 function analysis_of_the_first_and_second_list(list:: Vector{Int32}, name_list::String)
-    print("\n$name_list: " )
+    print("\n\n$name_list: " )
     show_list_in_one_line(list)
     println("\nLarge of the list: ", length(list))
     println("Greatest element of the list: ",max_value_of_the_list(list))
     println("Lowest elemnt of the list: ", min_value_of_the_list(list))
     println("Sum of all elements: ", sumatory(list))
     println("Inverted list: ", invert_list(list))
-    println("Sort list: ")
+    print("Sort list: ")
+    sort_list(list)
+    show_list_in_one_line(list)
 end
 
 
