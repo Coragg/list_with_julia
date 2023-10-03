@@ -1,11 +1,8 @@
 module ListaDinamica
 
 include("filesManagement.jl")
+include("presentList.jl")
 include("minMax.jl")
-
-show_list_in_one_line(list::Vector{Int32}) = for value in list
-        print("$value ")
-        end
 
 
 function analysis_of_the_first_and_second_list(list:: Vector{Int32}, name_list::String)
@@ -14,8 +11,8 @@ function analysis_of_the_first_and_second_list(list:: Vector{Int32}, name_list::
     println("\nLarge of the list: ", length(list))
     println("Greatest element of the list: ",max_value_of_the_list(list))
     println("Lowest elemnt of the list: ", min_value_of_the_list(list))
-    println("Sum of all elements: ")
-    println("Inverted list: ")
+    println("Sum of all elements: ", sumatory(list))
+    println("Inverted list: ", invert_list(list))
     println("Sort list: ")
 end
 
@@ -29,6 +26,4 @@ end
 
 main()
 end 
-
-
 
