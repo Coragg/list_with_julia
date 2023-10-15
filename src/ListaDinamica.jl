@@ -2,6 +2,7 @@ module ListaDinamica
 
 include("filesManagement.jl")
 include("presentList.jl")
+include("setsOfList.jl")
 include("minMax.jl")
 
 
@@ -16,14 +17,14 @@ function analysis_of_the_first_and_second_list(list:: Vector{Int32}, name_list::
 end
 
 
-#=function rest_and_join(first_list::Vector{Int32}, second_list::Vector{Int32})
-    println("\n\nJoin: ")
-    println("Sort join: ")
-    println("Intersection: ")
-    println("Sort intersection: ")
+function rest_and_join(list1::Vector{Int32}, list2::Vector{Int32})
+    println("\n\nUnion: $(show_list_in_one_line(set_union(list1, list2)))")
+    println("Sort union: $(show_list_in_one_line(merge_sort(set_union(list1, list2))))")
+    println("Intersection: $(set_intersection(list1, list2)) ")
+    println("Sort intersection: $(set_intersection_order(list1, list2))")
     println("Substraction: ")
     println("Sort substraction: ")
-end=#
+end
 
 
 function main()
@@ -31,9 +32,11 @@ function main()
     second_list::Vector{Int32} = [10, 1, 32, 24, 101, 82, -17, 57, 29, 6, 16, -5]
     analysis_of_the_first_and_second_list(first_list, "FIRST LIST")
     analysis_of_the_first_and_second_list(second_list, "SECOND LIST")
-#     rest_and_join(first_list, second_list)
+    rest_and_join(first_list, second_list)
 end
 
+
 main()
+
 end 
 

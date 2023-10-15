@@ -4,10 +4,10 @@ presentList:
 - Author: v_e_c
 - Date: 2023-10-02
 =#
-
 function show_list_in_one_line(list_of_numbers::Vector)
     #= transform all of the numbers and the list  in a simple string with all numbers
-    param list
+    param list Vector
+    return what_number_i_show string
     =#
    what_number_i_show = ""
    for number in list_of_numbers
@@ -28,8 +28,6 @@ function invert_list(list::Vector{Int32})
 end
 
 
-
-
 function merge_sort(list:: Vector{Int32})
     if length(list) <= 1
         return list
@@ -41,6 +39,7 @@ function merge_sort(list:: Vector{Int32})
 
     return merge(left, right)
 end
+
 
 function merge(left, right)
     result = []
@@ -69,8 +68,5 @@ function merge(left, right)
 
     return result
 end
-
-
-
 
 
