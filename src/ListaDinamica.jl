@@ -28,11 +28,11 @@ end
 
 
 function main()
-    first_list::Vector{Int32} = [10, 1, 5, 32, 0, -4, 8, 24]
-    second_list::Vector{Int32} = [10, 1, 32, 24, 101, 82, -17, 57, 29, 6, 16, -5]
+    first_list::Vector{Int32} = get_data_file("Input the name of the first list")
+    second_list::Vector{Int32} = get_data_file("Input the name of the second list")
     analysis_of_the_first_and_second_list(first_list, "FIRST LIST")
     analysis_of_the_first_and_second_list(second_list, "SECOND LIST")
-    rest_and_join(first_list, second_list)
+    rest_and_join(first_list, second_list) 
 end
 
 
