@@ -58,7 +58,10 @@ function substraction(set1, set2)
     return show_list_in_one_line(substraction_list)
 end
 
+
 function substraction_sort(set1, set2)
+    #= 
+     =#
     substraction_list::Vector{Int32} = []
     for number in set1
         if is_in_the_list(number, set2) == false
