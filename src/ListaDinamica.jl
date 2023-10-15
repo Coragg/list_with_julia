@@ -21,9 +21,9 @@ function rest_and_join(list1::Vector{Int32}, list2::Vector{Int32})
     println("\n\nUnion: $(show_list_in_one_line(set_union(list1, list2)))")
     println("Sort union: $(show_list_in_one_line(merge_sort(set_union(list1, list2))))")
     println("Intersection: $(set_intersection(list1, list2)) ")
-    println("Sort intersection: $(set_intersection_order(list1, list2))")
-    println("Substraction: ")
-    println("Sort substraction: ")
+    println("Sort intersection: $(set_intersection_sort(list1, list2))")
+    println("Substraction: $(substraction(list1,list2)) ")
+    println("Sort substraction: $(substraction_sort(list1,list2))")
 end
 
 
