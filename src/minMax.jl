@@ -33,3 +33,6 @@ function sumatory(list::Vector{Int32})
     end
     return sum
 end
+
+
+
