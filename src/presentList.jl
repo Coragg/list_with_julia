@@ -4,9 +4,17 @@ presentList:
 - Author: v_e_c
 - Date: 2023-10-02
 =#
-show_list_in_one_line(list::Vector{Int32}) = for value in list
-        print("$value ")
-        end
+
+function show_list_in_one_line(list_of_numbers::Vector{Int32})
+    #= transform all of the numbers and the list  in a simple string with all numbers
+    param list
+    =#
+   what_number_i_show = ""
+   for number in list_of_numbers
+        what_number_i_show *= string(number) * " "
+   end
+   return what_number_i_show
+end
 
 
 function invert_list(list::Vector{Int32})
@@ -20,19 +28,20 @@ function invert_list(list::Vector{Int32})
 end
 
 
-function sort_list(arr::Vector{Int32})
-    l = length(arr)
+function sort_list(list::Vector{Int32})
+    l = length(list)
     swapped = true
     while swapped
         swapped = false
-        for j = 2:l
-            if arr[j-1] > arr[j]
-                tmp = arr[j-1]
-                arr[j-1] = arr[j]
-                arr[j] = tmp
+        for j = 2: l
+            if list[j - 1] > list[j]
+                tmp = list[j - 1]
+                list[j - 1] = list[j]
+                list[j] = tmp
                 swapped = true
             end
         end
     end
 end
+
 
